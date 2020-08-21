@@ -1,0 +1,148 @@
+//====================================================================================================
+.filter {
+	display: inline-block;
+	border-radius: 3px;
+	border: 1px solid #c8c8c8;
+	padding: 40px 30px;
+
+	&__title {
+		color: #515151;
+		font-size: 20px;
+		font-weight: 600;
+		letter-spacing: 0.6px;
+		line-height: 20px;
+		display: flex;
+		flex-direction: column;
+		&::after {
+			content: "";
+			padding: 10px 0px 0px 0px;
+			height: 1px;
+			min-width: 100%;
+			border-bottom: 1px solid #c8c8c8;
+		}
+	}
+
+	&__body {
+	}
+
+	&__section {
+	}
+}
+
+.section-filter {
+	&__title {
+		color: #515151;
+		font-size: 18px;
+		font-weight: 600;
+		letter-spacing: 0.54px;
+		line-height: 18px;
+		margin: 25px 0px 50px 0px;
+		&:after {
+			content: "";
+			@include font-gr;
+			color: #515151;
+			padding: 0px 0px 0px 10px;
+		}
+	}
+
+	&__body {
+	}
+}
+
+//====================================================================================================
+.price-filter {
+	&__slider {
+		height: 2px;
+		width: 180px;
+		background-color: #c4c4c4;
+		margin: 0px 10px 30px 20px;
+		.noUi-base,
+		.noUi-connects {
+			position: relative;
+			height: 2px;
+			cursor: pointer;
+		}
+
+		.noUi-origin,
+		.noUi-connect {
+			z-index: 1;
+			will-change: tranform;
+			position: absolute;
+			// width: 10%;
+			// height: 10%;
+			top: 0;
+			left: 0;
+			transform-origin: 0 0;
+			transform-style: flat;
+		}
+		.noUi-handle {
+			position: relative;
+			cursor: pointer;
+			top: -9px;
+			left: 180px;
+			width: 20px;
+			height: 20px;
+			background: url("../../img/icone/gear.png") 0 0 no-repeat;
+		}
+
+		.noUi-connect {
+			background-color: #038cbc;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+		}
+
+		.noUi-tooltip {
+			position: absolute;
+			bottom: 25px;
+			left: 70%;
+			transform: translate(-50%, 0%);
+			color: #515151;
+			font-size: 14px;
+			font-weight: 500;
+			letter-spacing: 0.42px;
+			line-height: 14px;
+		}
+	}
+	&__values {
+	}
+}
+
+.values-price-filter {
+	display: flex;
+	width: 100%;
+
+	&__column {
+		display: flex;
+		align-items: center;
+		margin: 0px 20px 0px 0px;
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	&__label {
+		color: #515151;
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: 0.42px;
+		line-height: 14px;
+	}
+
+	&__input {
+		margin: 0px 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 26px;
+		border-radius: 2px;
+		border: 1px solid #038bbc71;
+	}
+}
+.input {
+	padding: 0px 5px;
+}
